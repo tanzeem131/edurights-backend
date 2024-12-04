@@ -5,7 +5,13 @@ const app = express();
 const enquiryRoutes = require("./routes/enquiry");
 
 app.use(bodyParser.json());
-app.use(cors());
+app.use(
+  cors({
+    origin: "https://edurights-consultancy.netlify.app/",
+    methods: ["GET", "POST"],
+    allowedHeaders: ["Content-Type", "Authorization"],
+  })
+);
 
 app.use("/api/enquiry", enquiryRoutes);
 

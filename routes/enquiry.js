@@ -1,17 +1,3 @@
-// const express = require("express");
-// const router = express.Router();
-// const enquiryController = require("../controllers/enquiryController");
-
-// // router.post("/submit", enquiryController.submitEnquiry);
-
-// router.get("/submit", (req, res) => {
-//   res.send("This route only supports POST requests.");
-// });
-
-// module.exports = router;
-
-// enquiry.js
-
 const express = require("express");
 const router = express.Router();
 const enquiryController = require("../controllers/enquiryController");
