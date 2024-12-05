@@ -9,7 +9,7 @@ app.use(cors());
 
 const allowedOrigins = [
   "http://localhost:3000", // Local development
-  "https://edurights-consultancy.netlify.app/", // Deployed frontend
+  "https://edurights-consultancy.netlify.app", // Deployed frontend
 ];
 
 const corsOptions = {
