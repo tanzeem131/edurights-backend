@@ -20,7 +20,7 @@ const corsOptions = {
       callback(new Error("Not allowed by CORS"));
     }
   },
-  methods: ["GET", "POST", "OPTIONS"],
+  methods: ["GET", "POST", "OPTIONS", "PATCH", "PUT"],
   allowedHeaders: ["Content-Type"],
   credentials: true,
 };
@@ -30,7 +30,6 @@ app.use(cors(corsOptions));
 app.options("*", cors(corsOptions));
 
 app.use("/api/enquiry", enquiryRoutes);
-app.set("trust proxy", 1); // Trust the first proxy
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
